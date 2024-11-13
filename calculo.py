@@ -1,9 +1,12 @@
+import random
+
 """Para escolher a frase do "você sabia?"."""
-import random 
-"""Para animações de calculando."""
 import time
-"""Os para o clear."""
+
+"""Para animações de calculando."""
 import os
+
+"""Os para o clear."""
 
 def clear():
     """Dá clear na tela do console
@@ -12,10 +15,11 @@ def clear():
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
-frases = \
-    ("Alguns carros possuem uma eficiência energética com etanol maior, enquanto em outros é menor.", \
-    "O Etanol produz menos gases poluentes quando é queimado.", \
-    "O Etanol veem de um recurso renovavel: A cana-de-açúcar.")
+frases = (
+    "Alguns carros possuem uma eficiência energética com etanol maior, enquanto em outros é menor.",
+    "O Etanol produz menos gases poluentes quando é queimado.",
+    "O Etanol veem de um recurso renovavel: A cana-de-açúcar."
+)
 frase_escolhida = random.choice(frases)
 
 
