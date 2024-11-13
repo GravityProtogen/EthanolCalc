@@ -2,7 +2,11 @@ import random
 import time
 import os
 
-def Clear():
+def clear():
+    """Dá clear na tela do console
+
+    Usa 'cls' no Windows, 'clear' em outros OS.
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
 
 frases = \
@@ -14,12 +18,12 @@ frase_escolhida = random.choice(frases)
 
 
 while True:
-    Clear()
+    clear()
     input("Olá, nos proximos inputs informe o preço do etanol/alcool e o preço da gasolina respectivamente \n \
         Pressione ENTER para continuar...")
 
-    etanol_preço = float(input("Informe o preço do etanol/alcool: "))
-    gasolina_preço = float(input("Informe o preço da gasolina: "))
+    etanol_preco = float(input("Informe o preço do etanol/alcool: "))
+    gasolina_preco = float(input("Informe o preço da gasolina: "))
 
     time.sleep(0.3)
     print("Calculando.")
@@ -29,14 +33,14 @@ while True:
     print("Calculando...")
     time.sleep(0.3)
 
-    Clear()
-    x = etanol_preço / gasolina_preço
-    if(x < 0.7):
+    clear()
+    x = etanol_preco / gasolina_preco
+    if x < 0.7:
         print("Está mais vantajoso utilizar o Alcool")
     else:
         print("Está mais vantajoso utilizar a Gasolina")
     print("Você sabia? ", frase_escolhida)
     x = input("Deseja fazer outro calculo? [S]im ou [N]ão ")
     if x.lower() == 'n' or x.lower() == 'nao':
-        Clear()
+        clear()
         break
