@@ -1,12 +1,8 @@
-import random
+import random # Para escolher a frase do "você sabia?"
+import time # Para animações de calculando.
+import os # Os para o clear
 
-"""Para escolher a frase do "você sabia?"."""
-import time
 
-"""Para animações de calculando."""
-import os
-
-"""Os para o clear."""
 
 def clear():
     """Dá clear na tela do console
@@ -26,19 +22,21 @@ frase_escolhida = random.choice(frases)
 
 while True:
     clear()
-    input("Olá, nos proximos inputs informe o preço do etanol/alcool e o preço da gasolina respectivamente \n \
-        Pressione ENTER para continuar...")
+    z = input("Olá, nos proximos inputs informe o preço do etanol/alcool e o preço da gasolina respectivamente \n \
+        Pressione ENTER para continuar(Se deseja desativar animações, digite [N]ão)... ")
 
     etanol_preco = float(input("Informe o preço do etanol/alcool: "))
     gasolina_preco = float(input("Informe o preço da gasolina: "))
 
-    time.sleep(0.3)
-    print("Calculando.")
-    time.sleep(0.3)
-    print("Calculando..")
-    time.sleep(0.3)
-    print("Calculando...")
-    time.sleep(0.3)
+
+    if z.lower() != "n" and z.lower() != "nao":
+        time.sleep(0.5)
+        print("Calculando.")
+        time.sleep(0.5)
+        print("Calculando..")
+        time.sleep(0.5)
+        print("Calculando...")
+        time.sleep(0.5)
 
     clear()
     x = etanol_preco / gasolina_preco
