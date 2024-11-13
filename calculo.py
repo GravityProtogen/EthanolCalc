@@ -1,5 +1,8 @@
-import random
+"""Para escolher a frase do "você sabia?"."""
+import random 
+"""Para animações de calculando."""
 import time
+"""Os para o clear."""
 import os
 
 def clear():
