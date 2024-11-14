@@ -27,6 +27,7 @@ while True:
 
     etanol_preco = float(input("Informe o preço do etanol/alcool: "))
     gasolina_preco = float(input("Informe o preço da gasolina: "))
+    
 
 
     if z.lower() != "n" and z.lower() != "nao":
@@ -41,7 +42,10 @@ while True:
     clear()
     x = etanol_preco / gasolina_preco
     if x < 0.7:
-        print("Está mais vantajoso utilizar o Alcool")
+        print(
+            "Está mais vantajoso utilizar o Alcool. Mas lembre-se de que", 
+            "a eficiencia do mesmo é menor com o calor do dia"
+            )
     else:
         print("Está mais vantajoso utilizar a Gasolina")
     print("Você sabia? ", frase_escolhida)
